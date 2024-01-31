@@ -1,5 +1,6 @@
 import itertools
 import random
+from typing import List
 
 
 class Card(object):
@@ -65,3 +66,6 @@ class Player(object):
 
     def __str__(self):
         return str([str(card) for card in self.hand])
+
+    def get_hand(self) -> List[str]:
+        return [str(card) for card in self.hand]
